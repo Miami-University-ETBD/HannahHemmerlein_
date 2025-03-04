@@ -12,27 +12,28 @@ body {
     line-height: 1.6;
 }
 
-/* Banner */
+/* Banner with Decorative Color Blocking */
 .banner {
     width: 100%;
     height: 300px;
-    background: url('banner.jpg') center/cover no-repeat;
-    background-size: cover;
+    position: relative;
+    background: linear-gradient(135deg, #4f94b0 0%, #87cefa 100%); /* Blue gradient */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     border-bottom: 5px solid #87cefa; /* Light blue accent */
 }
 
 .banner::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: -30px;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3); /* Dark overlay for better text visibility */
+    background: #ffffff; /* White block */
+    transform: skewY(-8deg); /* Skew for an angled color block */
+    z-index: 1;
 }
 
 .banner h1 {
