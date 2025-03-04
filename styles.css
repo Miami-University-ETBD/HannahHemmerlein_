@@ -12,10 +12,10 @@ body {
     line-height: 1.6;
 }
 
-/* Banner with Decorative Color Blocking */
+/* Banner with Decorative Color Blocking on Index (Home Page) */
 .banner {
     width: 100%;
-    height: 300px;
+    height: 350px; /* Increased height for more dramatic effect */
     position: relative;
     background: linear-gradient(135deg, #4f94b0 0%, #87cefa 100%); /* Blue gradient */
     display: flex;
@@ -27,7 +27,7 @@ body {
 .banner::after {
     content: "";
     position: absolute;
-    top: -30px;
+    top: -40px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -38,13 +38,13 @@ body {
 
 .banner h1 {
     color: white;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: 'Lora', serif; /* Elegant font */
     z-index: 2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Container */
+/* Container for Main Content */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -113,25 +113,6 @@ h3 {
 .product:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Store Hours Table */
-table {
-    width: 100%;
-    margin-top: 15px;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #87cefa; /* Light blue border */
-    padding: 10px;
-    text-align: center;
-}
-
-th {
-    background: #4f94b0; /* Primary blue background */
-    color: #ffffff;
-    font-size: 1.1rem;
 }
 
 /* Footer */
