@@ -1,160 +1,116 @@
-/* Global Styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif; /* Stylish modern font */
+    font-family: Arial, sans-serif;
 }
 
+/* Body Styling */
 body {
-    background-color: #f0f8ff; /* Light blue background */
-    color: #3d3d3d;
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.6;
-}
-
-/* Banner with Decorative Color Blocking on Index (Home Page) */
-.banner {
-    width: 100%;
-    height: 350px; /* Increased height for more dramatic effect */
-    position: relative;
-    background: linear-gradient(135deg, #4f94b0 0%, #87cefa 100%); /* Blue gradient */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 5px solid #87cefa; /* Light blue accent */
-}
-
-.banner::after {
-    content: "";
-    position: absolute;
-    top: -40px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #ffffff; /* White block */
-    transform: skewY(-8deg); /* Skew for an angled color block */
-    z-index: 1;
-}
-
-.banner h1 {
-    color: white;
-    font-size: 3.5rem;
-    font-family: 'Lora', serif; /* Elegant font */
-    z-index: 2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Container for Main Content */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 0;
-}
-
-/* Typography */
-h1, h2 {
-    font-family: 'Lora', serif; /* Elegant serif font for titles */
-    color: #4f94b0; /* Primary blue color */
-    text-align: center;
-}
-
-h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-top: 30px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    color: #4f94b0;
-    margin-bottom: 10px;
-}
-
-/* Product Grid */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.product {
-    background: #ffffff;
-    border-radius: 12px;
     padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product img {
-    width: 100%;
-    height: auto;
+/* Header */
+header {
+    background-color: #4a4a4a;
+    color: white;
+    text-align: center;
+    padding: 20px;
     border-radius: 10px;
 }
 
-.product h3 {
-    font-size: 1.3rem;
-    color: #4f94b0;
-    margin: 10px 0;
+/* Main Container */
+.container {
+    display: flex;
+    align-items: flex-start; /* Aligns content at the top */
+    gap: 20px; /* Space between main-content and aside */
+    padding: 20px;
 }
 
-.product p {
-    font-size: 1.2rem;
-    color: #5a5a5a;
-    font-weight: bold;
+/* Main Content */
+.main-content {
+    flex-grow: 1; /* Expands to take available space */
+    max-width: 70%; /* Prevents shrinking too much */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+/* Sidebar (Aside) */
+aside {
+    width: 250px; /* Fixed width */
+    flex-shrink: 0; /* Prevents shrinking */
+    background-color: #e8e8e8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #4a4a4a;
+    color: white;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    background: #4f94b0; /* Primary blue background */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4a4a4a;
     color: white;
-    font-size: 1rem;
+    border-radius: 10px;
 }
 
-/* Aside Positioning */
-aside {
-    position: fixed;  /* Fixes the aside element to the side of the page */
-    top: 100px;       /* Adjust top distance */
-    right: 10px;      /* Right-aligned */
-    width: 250px;     /* Width of the aside section */
-    background-color: #ffffff; /* White background */
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    z-index: 10;      /* Ensure it appears above other content */
-}
+/* Responsive Design */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-aside h3 {
-    font-size: 1.5rem;
-    color: #4f94b0;
-    margin-bottom: 10px;
-}
+    .main-content {
+        max-width: 100%;
+    }
 
-aside p {
-    font-size: 1.1rem;
-    color: #555;
-}
-
-/* Make aside responsive on smaller screens */
-@media (max-width: 768px) {
     aside {
-        position: relative;
         width: 100%;
-        margin-top: 20px;
-        box-shadow: none; /* Remove shadow on smaller screens */
+        text-align: center;
     }
 }
