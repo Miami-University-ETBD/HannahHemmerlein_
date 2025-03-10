@@ -215,16 +215,4 @@ aside p {
         margin-right: 0; /* Remove right margin for smaller screens */
     }
 }
-/* Styling for the introductory paragraph */
-.intro-paragraph {
-    margin-left: 20px;   /* Same margin as the product grid and other sections */
-    margin-right: 20px;  /* Same margin as the product grid and other sections */
-    margin-bottom: 20px; /* Bottom margin to separate from the heading below */
-    text-align: justify; /* Justifies the paragraph text */
-}
-
-/* Justify the "Premier Pottery Pieces from Heritage Crafts" heading to the left */
-.left-align {
-    text-align: left;
-}
 
