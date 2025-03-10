@@ -44,25 +44,12 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Main Layout */
+/* Container for Main Content */
 .container {
-    display: flex;
-    align-items: flex-start; /* Ensures top alignment */
-    justify-content: space-between;
     width: 90%;
     max-width: 1200px;
     margin: auto;
     padding: 40px 0;
-}
-
-/* Main Content */
-.main-content {
-    flex-grow: 1; /* Expands to take available space */
-    max-width: 70%; /* Prevents main content from shrinking too much */
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Typography */
@@ -86,6 +73,16 @@ h3 {
     font-size: 1.5rem;
     color: #4f94b0;
     margin-bottom: 10px;
+}
+
+/* Subheading Styling */
+.subheading {
+    font-size: 1.5rem; /* Smaller than h1 */
+    font-weight: normal; /* Less bold for a subtle look */
+    color: #5a5a5a; /* Slightly muted color */
+    text-align: center;
+    margin-top: -10px; /* Adjust spacing */
+    margin-bottom: 20px;
 }
 
 /* Product Grid */
@@ -128,6 +125,37 @@ h3 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Pottery Glaze Color Table */
+.glaze-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.glaze-table thead {
+    background: #4f94b0; /* Blue header */
+    color: white;
+}
+
+.glaze-table th, .glaze-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.glaze-table tbody tr:nth-child(even) {
+    background: #f0f8ff; /* Light alternate row color */
+}
+
+.glaze-table tbody tr:hover {
+    background: #d9ecf5; /* Subtle hover effect */
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -138,51 +166,36 @@ footer {
     font-size: 1rem;
 }
 
-/* Updated Aside Styling */
+/* Aside Positioning */
 aside {
-    width: 250px;     /* Fixed width */
-    flex-shrink: 0;   /* Prevents shrinking */
-    background-color: #ffffff;
+    position: fixed;  /* Fixes the aside element to the side of the page */
+    top: 100px;       /* Adjust top distance */
+    right: 10px;      /* Right-aligned */
+    width: 250px;     /* Width of the aside section */
+    background-color: #ffffff; /* White background */
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    position: relative; /* Ensures it stays in flow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    z-index: 10;      /* Ensure it appears above other content */
 }
 
-/* Fixing the Issue: Preventing Overlap */
-@media (min-width: 900px) {
-    .container {
-        display: flex;
-        gap: 20px; /* Adds space between main-content and aside */
-    }
-
-    .main-content {
-        max-width: 70%; /* Ensures aside doesn't cover content */
-    }
-
-    aside {
-        position: sticky;
-        top: 100px; /* Adjusts vertical positioning */
-        right: 0;
-    }
+aside h3 {
+    font-size: 1.5rem;
+    color: #4f94b0;
+    margin-bottom: 10px;
 }
 
-/* Make Aside Responsive */
-@media (max-width: 900px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
+aside p {
+    font-size: 1.1rem;
+    color: #555;
+}
 
-    .main-content {
-        max-width: 100%;
-    }
-
+/* Make aside responsive on smaller screens */
+@media (max-width: 768px) {
     aside {
-        width: 100%;
         position: relative;
-        text-align: center;
+        width: 100%;
         margin-top: 20px;
-        box-shadow: none;
+        box-shadow: none; /* Remove shadow on smaller screens */
     }
 }
