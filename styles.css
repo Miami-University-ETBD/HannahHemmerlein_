@@ -132,7 +132,8 @@ h3 {
 }
 
 .glaze-section h3 {
-    margin-bottom: 20px; /* Space before the heading */
+    margin-top: 40px; /* Added margin to shift the heading down */
+    margin-bottom: 20px; /* Space before the table */
 }
 
 .glaze-table {
