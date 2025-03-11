@@ -3,112 +3,95 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif; /* Stylish modern font */
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: #f0f8ff; /* Light blue background */
+    background-color: #f0f8ff;
     color: #3d3d3d;
     line-height: 1.6;
-    text-align: left; /* Ensures all text is left-aligned */
+    text-align: left;
     padding-right: 250px; /* Add right margin to body to make room for aside */
 }
 
-/* Navigation Bar Container */
+/* Header, Navbar, and Footer */
+header, .navbar, footer {
+    width: 100%; /* Ensure they span the full width */
+    margin-right: 0; /* Remove right margin specifically from header, navbar, and footer */
+}
+
+header {
+    background-color: #4f94b0;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
 .navbar {
     background-color: #333;
-    display: flex; /* Use Flexbox for layout */
-    justify-content: center; /* Center the navbar items */
-    align-items: center; /* Vertically align items */
-    padding: 12px 0; /* Increased padding for better spacing */
-    border-bottom: 3px solid #4f94b0; /* Added a subtle blue border at the bottom */
-    width: 100%; /* Ensure navbar spans the full width */
-}
-
-/* Navigation Links Container */
-.navbar ul {
-    list-style-type: none; /* Remove bullet points from list items */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    display: flex; /* Display the list items horizontally */
-}
-
-/* Navigation List Items */
-.navbar li {
-    margin: 0 10px; /* Add spacing between the list items */
-}
-
-/* Navigation Links */
-.navbar a {
-    display: block;
-    color: white;
-    font-size: 1.2rem; /* Adjusted font size for readability */
-    text-align: center;
-    padding: 14px 20px; /* Added more horizontal and vertical padding */
-    text-decoration: none;
-    border-radius: 5px; /* Rounded corners for smoother edges */
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-}
-
-/* Change color and add subtle transform on hover */
-.navbar a:hover {
-    background-color: #4f94b0; /* Change background color to blue accent */
-    color: white;
-    transform: scale(1.05); /* Slightly enlarge the link on hover */
-}
-
-/* Active/current link */
-.navbar a.active {
-    background-color: #4CAF50;
-    color: white;
-    font-weight: bold; /* Made active link stand out more */
-}
-
-/* Optional: Responsive navbar (adjusts for smaller screens) */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack navbar items vertically on small screens */
-    }
-    .navbar a {
-        margin: 5px 0; /* Reduced spacing between links on mobile */
-        width: 100%; /* Made each link take full width on mobile */
-    }
-}
-
-/* Banner with Decorative Color Blocking on Index (Home Page) */
-.banner {
-    width: 100%;
-    height: 350px; /* Increased height for more dramatic effect */
-    position: relative;
-    background: linear-gradient(135deg, #a9e7ff 0%, #a6dbfb 100%); /* Blue gradient */
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 5px solid #87cefa; /* Light blue accent */
+    padding: 12px 0;
+    border-bottom: 3px solid #4f94b0;
 }
 
-.banner::after {
-    content: "";
-    position: absolute;
-    top: -40px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #ffffff; /* White block */
-    transform: skewY(-8deg); /* Skew for an angled color block */
-    z-index: 1;
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
 }
 
-/* More Specific Rule for Banner H1 */
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #4f94b0;
+    color: white;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #4f94b0;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    background: linear-gradient(135deg, #a9e7ff 0%, #a6dbfb 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #87cefa;
+}
+
 .banner h1 {
-    color: white !important; /* Ensure the color stays white */
+    color: white;
     font-size: 3.5rem;
-    font-family: 'Lora', serif; /* Elegant font */
     z-index: 2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Container for Main Content */
+/* Main Content */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -118,59 +101,16 @@ body {
 
 /* Typography */
 h1, h2 {
-    font-family: 'Lora', serif; /* Elegant serif font for titles */
-    color: #4f94b0; /* Primary blue color */
+    font-family: 'Lora', serif;
+    color: #4f94b0;
 }
 
 h1 {
     font-size: 3.5rem;
-    margin-bottom: 20px;
 }
 
 h2 {
     font-size: 2.5rem;
-    margin-top: 30px;
-}
-
-/* Header Section (Matching Home Page) */
-header {
-    background-color: #4f94b0; /* Matching blue */
-    color: white;
-    padding: 15px;
-    text-align: center;
-    width: 100%; /* Ensure header spans the full width */
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2rem;
-}
-
-/* Introductory Paragraph Styling */
-.intro-paragraph {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto 20px auto;
-    text-align: left; /* Ensures left justification */
-}
-
-h3 {
-    font-size: 1.5rem;
-    color: #4f94b0;
-    margin-bottom: 10px;
-}
-
-/* Subheading Styling */
-.subheading {
-    font-size: 1.5rem;
-    font-weight: normal;
-    color: #5a5a5a;
-    margin-top: -10px;
-    margin-bottom: 40px;
 }
 
 /* Product Grid */
@@ -187,7 +127,6 @@ h3 {
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product img {
@@ -199,7 +138,6 @@ h3 {
 .product h3 {
     font-size: 1.3rem;
     color: #4f94b0;
-    margin: 10px 0;
 }
 
 .product p {
@@ -208,21 +146,14 @@ h3 {
     font-weight: bold;
 }
 
-.product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Universal Table Styling */
+/* Tables */
 .styled-table {
     width: 100%;
-    max-width: 600px;
     margin: 40px 0;
     border-collapse: collapse;
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .styled-table thead {
@@ -232,7 +163,7 @@ h3 {
 
 .styled-table th, .styled-table td {
     padding: 12px;
-    text-align: left; /* Ensure table content is left-aligned */
+    text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
@@ -244,7 +175,7 @@ h3 {
     background: #d9ecf5;
 }
 
-/* Universal List Styling */
+/* Lists */
 ul {
     list-style-type: none;
     padding: 0;
@@ -260,20 +191,9 @@ li {
 footer {
     text-align: center;
     padding: 20px;
-    margin-top: 50px;
     background: #4f94b0;
     color: white;
     font-size: 1rem;
-    width: 100%; /* Ensure footer spans the full width */
-    margin-right: 0; /* Explicitly remove margin on right */
-}
-
-/* Adjusted Layout for About Us Page */
-.about-us-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 0;
 }
 
 /* Aside Positioning */
@@ -287,13 +207,12 @@ aside {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     z-index: 10;
-    text-align: left; /* Ensures aside text aligns left */
+    text-align: left;
 }
 
 aside h3 {
     font-size: 1.5rem;
     color: #4f94b0;
-    margin-bottom: 10px;
 }
 
 aside p {
@@ -301,20 +220,29 @@ aside p {
     color: #555;
 }
 
-/* Make aside responsive on smaller screens */
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
+    body {
+        padding-right: 0; /* Remove extra padding for smaller screens */
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Stack products on mobile */
+    }
+
     aside {
         position: relative;
         width: 100%;
         margin-top: 20px;
         box-shadow: none;
-    }
-
-    .product-grid {
-        margin-right: 0;
-    }
-
-    body {
-        padding-right: 0; /* Remove extra padding for smaller screens */
     }
 }
