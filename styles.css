@@ -10,6 +10,7 @@ body {
     background-color: #f0f8ff; /* Light blue background */
     color: #3d3d3d;
     line-height: 1.6;
+    text-align: left; /* Ensures all text is left-aligned */
 }
 
 /* Banner with Decorative Color Blocking on Index (Home Page) */
@@ -57,7 +58,6 @@ body {
 h1, h2 {
     font-family: 'Lora', serif; /* Elegant serif font for titles */
     color: #4f94b0; /* Primary blue color */
-    text-align: center;
 }
 
 h1 {
@@ -89,10 +89,10 @@ header p {
 
 /* Introductory Paragraph Styling */
 .intro-paragraph {
-    width: 90%; /* Matches the product grid width */
-    max-width: 1200px; /* Ensures consistency with the product grid */
-    margin: 0 auto 20px auto; /* Centers the paragraph */
-    text-align: justify; /* Improves readability */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    text-align: left; /* Ensures left justification */
 }
 
 h3 {
@@ -103,20 +103,14 @@ h3 {
 
 /* Subheading Styling */
 .subheading {
-    font-size: 1.5rem; /* Smaller than h1 */
-    font-weight: normal; /* Less bold for a subtle look */
-    color: #5a5a5a; /* Slightly muted color */
-    text-align: center;
-    margin-top: -10px; /* Adjust spacing */
-    margin-bottom: 40px; /* More space before content */
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #5a5a5a;
+    margin-top: -10px;
+    margin-bottom: 40px;
 }
 
-/* Justify the "Premier Pottery Pieces from Heritage Crafts" heading to the left */
-.left-align {
-    text-align: left;
-}
-
-/* New Styling for Lists */
+/* Lists */
 ul, ol {
     margin: 20px 0;
     padding-left: 20px;
@@ -130,10 +124,10 @@ li {
 /* Product Grid */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 20px;
-    margin-right: 350px; /* Add a large margin on the right side to prevent overlap with aside */
+    margin-right: 350px;
 }
 
 .product {
@@ -170,19 +164,19 @@ li {
 
 /* Pottery Glaze Color Table */
 .glaze-section {
-    margin-top: 30px; /* Moves the section lower */
-    text-align: center;
+    margin-top: 30px;
+    text-align: left; /* Ensures left alignment */
 }
 
 .glaze-section h3 {
-    margin-top: 100px; /* More space above the heading */
-    margin-bottom: 30px; /* Increased space below heading */
+    margin-top: 100px;
+    margin-bottom: 30px;
 }
 
 .glaze-table {
     width: 100%;
     max-width: 600px;
-    margin: 40px auto; /* More space above the table */
+    margin: 40px auto;
     border-collapse: collapse;
     background: white;
     border-radius: 10px;
@@ -191,45 +185,46 @@ li {
 }
 
 .glaze-table thead {
-    background: #4f94b0; /* Blue header */
+    background: #4f94b0;
     color: white;
 }
 
 .glaze-table th, .glaze-table td {
     padding: 12px;
-    text-align: center;
+    text-align: left; /* Ensure table content is left-aligned */
     border-bottom: 1px solid #ddd;
 }
 
 .glaze-table tbody tr:nth-child(even) {
-    background: #f0f8ff; /* Light alternate row color */
+    background: #f0f8ff;
 }
 
 .glaze-table tbody tr:hover {
-    background: #d9ecf5; /* Subtle hover effect */
+    background: #d9ecf5;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    margin-top: 50px; /* More space between table and footer */
-    background: #4f94b0; /* Primary blue background */
+    margin-top: 50px;
+    background: #4f94b0;
     color: white;
     font-size: 1rem;
 }
 
 /* Aside Positioning */
 aside {
-    position: fixed;  /* Fixes the aside element to the side of the page */
-    top: 100px;       /* Adjust top distance */
-    right: 10px;      /* Right-aligned */
-    width: 250px;     /* Width of the aside section */
-    background-color: #ffffff; /* White background */
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    width: 250px;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    z-index: 10;      /* Ensure it appears above other content */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    text-align: left; /* Ensures aside text aligns left */
 }
 
 aside h3 {
@@ -245,17 +240,18 @@ aside p {
 
 /* Restrict the width of main content */
 .content-limited {
-    max-width: 65%; /* Restricts the width */
-    margin-right: 20px; /* Adds space between content and the sidebar */
+    max-width: 65%;
+    margin-right: 20px;
+    text-align: left; /* Ensures all main content is left-aligned */
 }
 
 /* Store Hours Alignment */
 .left-align {
-    text-align: left; /* Ensure the "Store Hours" heading is left-aligned */
+    text-align: left;
 }
 
 .store-hours-details {
-    text-align: left; /* Ensure the store hours details are justified to the left */
+    text-align: left;
 }
 
 /* Make aside responsive on smaller screens */
@@ -264,11 +260,10 @@ aside p {
         position: relative;
         width: 100%;
         margin-top: 20px;
-        box-shadow: none; /* Remove shadow on smaller screens */
+        box-shadow: none;
     }
 
-    /* Adjust grid for smaller screens */
     .product-grid {
-        margin-right: 0; /* Remove right margin for smaller screens */
+        margin-right: 0;
     }
 }
