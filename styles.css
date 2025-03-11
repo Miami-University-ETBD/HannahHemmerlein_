@@ -173,7 +173,8 @@ li {
     margin-bottom: 30px;
 }
 
-.glaze-table {
+/* Universal Table Styling */
+.styled-table {
     width: 100%;
     max-width: 600px;
     margin: 40px auto;
@@ -184,23 +185,40 @@ li {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.glaze-table thead {
+.styled-table thead {
     background: #4f94b0;
     color: white;
 }
 
-.glaze-table th, .glaze-table td {
+.styled-table th, .styled-table td {
     padding: 12px;
     text-align: left; /* Ensure table content is left-aligned */
     border-bottom: 1px solid #ddd;
 }
 
-.glaze-table tbody tr:nth-child(even) {
+.styled-table tbody tr:nth-child(even) {
     background: #f0f8ff;
 }
 
-.glaze-table tbody tr:hover {
+.styled-table tbody tr:hover {
     background: #d9ecf5;
+}
+
+/* Apply the new table styles to all tables */
+table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin: 40px auto;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
 }
 
 /* Footer */
