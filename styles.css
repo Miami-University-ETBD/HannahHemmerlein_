@@ -118,7 +118,7 @@ h2 {
     margin-top: 30px;
 }
 
-/* New Styling for Header */
+/* Header Section (Matching Home Page) */
 header {
     background-color: #4f94b0; /* Matching blue */
     color: white;
@@ -158,32 +158,12 @@ h3 {
     margin-bottom: 40px;
 }
 
-/* Lists */
-ul {
-    list-style-type: disc; /* Standard bullet points */
-    margin: 20px 0;
-    padding-left: 25px;
-}
-
-ol {
-    list-style-type: decimal; /* Standard numbered list */
-    margin: 20px 0;
-    padding-left: 25px;
-}
-
-li {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 5px; /* Adds spacing between list items */
-}
-
 /* Product Grid */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 20px;
-    margin-right: 350px;
 }
 
 .product {
@@ -218,17 +198,6 @@ li {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Pottery Glaze Color Table */
-.glaze-section {
-    margin-top: 30px;
-    text-align: left; /* Ensures left alignment */
-}
-
-.glaze-section h3 {
-    margin-top: 100px;
-    margin-bottom: 30px;
-}
-
 /* Universal Table Styling */
 .styled-table {
     width: 100%;
@@ -260,23 +229,6 @@ li {
     background: #d9ecf5;
 }
 
-/* Apply the new table styles to all tables */
-table {
-    width: 100%;
-    max-width: 600px;
-    border-collapse: collapse;
-    margin: 40px auto;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -285,6 +237,14 @@ footer {
     background: #4f94b0;
     color: white;
     font-size: 1rem;
+}
+
+/* Adjusted Layout for About Us Page */
+.about-us-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
 }
 
 /* Aside Positioning */
@@ -312,22 +272,6 @@ aside p {
     color: #555;
 }
 
-/* Restrict the width of main content */
-.content-limited {
-    max-width: 65%;
-    margin-right: 20px;
-    text-align: left; /* Ensures all main content is left-aligned */
-}
-
-/* Store Hours Alignment */
-.left-align {
-    text-align: left;
-}
-
-.store-hours-details {
-    text-align: left;
-}
-
 /* Make aside responsive on smaller screens */
 @media (max-width: 768px) {
     aside {
@@ -341,4 +285,3 @@ aside p {
         margin-right: 0;
     }
 }
-
