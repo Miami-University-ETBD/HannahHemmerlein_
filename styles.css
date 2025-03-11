@@ -177,7 +177,7 @@ li {
 .styled-table {
     width: 100%;
     max-width: 600px;
-    margin: 40px auto;
+    margin: 40px 0;
     border-collapse: collapse;
     background: white;
     border-radius: 10px;
