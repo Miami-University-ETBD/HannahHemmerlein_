@@ -23,6 +23,19 @@ body {
     border-bottom: 3px solid #4f94b0; /* Added a subtle blue border at the bottom */
 }
 
+/* Navigation Links Container */
+.navbar ul {
+    list-style-type: none; /* Remove bullet points from list items */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Display the list items horizontally */
+}
+
+/* Navigation List Items */
+.navbar li {
+    margin: 0 10px; /* Add spacing between the list items */
+}
+
 /* Navigation Links */
 .navbar a {
     display: block;
@@ -31,7 +44,6 @@ body {
     text-align: center;
     padding: 14px 20px; /* Added more horizontal and vertical padding */
     text-decoration: none;
-    margin: 0 10px; /* Added spacing between links */
     border-radius: 5px; /* Rounded corners for smoother edges */
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
