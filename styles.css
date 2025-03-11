@@ -11,6 +11,7 @@ body {
     color: #3d3d3d;
     line-height: 1.6;
     text-align: left; /* Ensures all text is left-aligned */
+    padding-right: 250px; /* Add right margin to body to make room for aside */
 }
 
 /* Navigation Bar Container */
@@ -241,6 +242,18 @@ h3 {
     background: #d9ecf5;
 }
 
+/* Universal List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -296,4 +309,9 @@ aside p {
     .product-grid {
         margin-right: 0;
     }
+
+    body {
+        padding-right: 0; /* Remove extra padding for smaller screens */
+    }
 }
+
