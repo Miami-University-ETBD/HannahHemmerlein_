@@ -137,6 +137,7 @@ header {
     color: white;
     padding: 15px;
     text-align: center;
+    width: 100%; /* Ensure header spans the full width without margin */
 }
 
 header h1 {
@@ -262,6 +263,7 @@ footer {
     background: #4f94b0;
     color: white;
     font-size: 1rem;
+    width: 100%; /* Ensure footer spans the full width without margin */
 }
 
 /* Adjusted Layout for About Us Page */
@@ -314,4 +316,3 @@ aside p {
         padding-right: 0; /* Remove extra padding for smaller screens */
     }
 }
-
