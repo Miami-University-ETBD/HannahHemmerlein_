@@ -11,13 +11,14 @@ body {
     color: #3d3d3d;
     line-height: 1.6;
     text-align: left;
-    padding-right: 250px; /* Add right margin to body to make room for aside */
+    padding-right: 260px; /* Space for the aside */
+    margin-bottom: 50px; /* Space for footer */
 }
 
 /* Header, Navbar, and Footer */
 header, .navbar, footer {
-    width: 100%; /* Ensure they span the full width */
-    margin-right: 0; /* Remove right margin specifically from header, navbar, and footer */
+    width: 100%;
+    margin-right: 0;
 }
 
 header {
