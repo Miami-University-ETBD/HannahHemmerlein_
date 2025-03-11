@@ -294,36 +294,41 @@ aside p {
     }
 }
 
-
 /* Navigation Bar Container */
 .navbar {
     background-color: #333;
     display: flex; /* Use Flexbox for layout */
     justify-content: center; /* Center the navbar items */
     align-items: center; /* Vertically align items */
-    padding: 10px; /* Add some padding for spacing */
+    padding: 12px 0; /* Increased padding for better spacing */
+    border-bottom: 3px solid #4f94b0; /* Added a subtle blue border at the bottom */
 }
 
 /* Navigation Links */
 .navbar a {
     display: block;
     color: white;
+    font-size: 1.2rem; /* Adjusted font size for readability */
     text-align: center;
-    padding: 12px 16px; /* Add horizontal and vertical padding */
+    padding: 14px 20px; /* Added more horizontal and vertical padding */
     text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    margin: 0 10px; /* Added spacing between links */
+    border-radius: 5px; /* Rounded corners for smoother edges */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
-/* Change color on hover */
+/* Change color and add subtle transform on hover */
 .navbar a:hover {
-    background-color: #ddd;
-    color: navy;
+    background-color: #4f94b0; /* Change background color to blue accent */
+    color: white;
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
 }
 
 /* Active/current link */
 .navbar a.active {
     background-color: #4CAF50;
     color: white;
+    font-weight: bold; /* Made active link stand out more */
 }
 
 /* Optional: Responsive navbar (adjusts for smaller screens) */
@@ -331,19 +336,8 @@ aside p {
     .navbar {
         flex-direction: column; /* Stack navbar items vertically on small screens */
     }
+    .navbar a {
+        margin: 5px 0; /* Reduced spacing between links on mobile */
+        width: 100%; /* Made each link take full width on mobile */
+    }
 }
-.image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #f4f4f4;
- }
- 
- 
- /* Responsive Image */
- .responsive {
-    max-width: 100%;
-    height: auto;
- }
- 
