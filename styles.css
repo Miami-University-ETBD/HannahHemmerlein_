@@ -220,6 +220,15 @@ aside p {
     margin-right: 20px; /* Adds space between content and the sidebar */
 }
 
+/* Store Hours Alignment */
+.left-align {
+    text-align: left; /* Ensure the "Store Hours" heading is left-aligned */
+}
+
+.store-hours-details {
+    text-align: left; /* Ensure the store hours details are justified to the left */
+}
+
 /* Make aside responsive on smaller screens */
 @media (max-width: 768px) {
     aside {
