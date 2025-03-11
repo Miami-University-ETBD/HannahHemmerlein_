@@ -332,3 +332,18 @@ aside p {
         flex-direction: column; /* Stack navbar items vertically on small screens */
     }
 }
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f4f4f4;
+ }
+ 
+ 
+ /* Responsive Image */
+ .responsive {
+    max-width: 100%;
+    height: auto;
+ }
+ 
