@@ -17,7 +17,7 @@ body {
     width: 100%;
     height: 350px; /* Increased height for more dramatic effect */
     position: relative;
-    background: linear-gradient(135deg, #4f94b0 0%, #87cefa 100%); /* Blue gradient */
+    background: linear-gradient(135deg, #a9e7ff 0%, #a6dbfb 100%); /* Blue gradient */
     display: flex;
     justify-content: center;
     align-items: center;
