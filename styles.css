@@ -71,10 +71,10 @@ h2 {
 
 /* Introductory Paragraph Styling */
 .intro-paragraph {
-    margin-left: 20px;   /* Same margin as the product grid and other sections */
-    margin-right: 20px;  /* Same margin as the product grid and other sections */
-    margin-bottom: 20px; /* Bottom margin to separate from the heading below */
-    text-align: justify; /* Justifies the paragraph text */
+    width: 90%; /* Matches the product grid width */
+    max-width: 1200px; /* Ensures consistency with the product grid */
+    margin: 0 auto 20px auto; /* Centers the paragraph */
+    text-align: justify; /* Improves readability */
 }
 
 h3 {
