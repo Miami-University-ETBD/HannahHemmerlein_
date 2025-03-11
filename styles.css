@@ -23,6 +23,14 @@ body {
     border-bottom: 3px solid #4f94b0; /* Added a subtle blue border at the bottom */
 }
 
+/* Remove the bullet points from the list */
+.navbar ul {
+    list-style-type: none; /* Ensures no bullet points */
+    display: flex; /* Aligns items left to right */
+    padding: 0;
+    margin: 0;
+}
+
 /* Navigation Links */
 .navbar a {
     display: block;
