@@ -13,6 +13,62 @@ body {
     text-align: left; /* Ensures all text is left-aligned */
 }
 
+/* Navigation Bar Container */
+.navbar {
+    background-color: #333;
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center the navbar items */
+    align-items: center; /* Vertically align items */
+    padding: 12px 0; /* Increased padding for better spacing */
+    border-bottom: 3px solid #4f94b0; /* Added a subtle blue border at the bottom */
+}
+
+/* Remove the bullet points from the list */
+.navbar ul {
+    list-style-type: none; /* Ensures no bullet points */
+    display: flex; /* Aligns items left to right */
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation Links */
+.navbar a {
+    display: block;
+    color: white;
+    font-size: 1.2rem; /* Adjusted font size for readability */
+    text-align: center;
+    padding: 14px 20px; /* Added more horizontal and vertical padding */
+    text-decoration: none;
+    margin: 0 10px; /* Added spacing between links */
+    border-radius: 5px; /* Rounded corners for smoother edges */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Change color and add subtle transform on hover */
+.navbar a:hover {
+    background-color: #4f94b0; /* Change background color to blue accent */
+    color: white;
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
+}
+
+/* Active/current link */
+.navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold; /* Made active link stand out more */
+}
+
+/* Optional: Responsive navbar (adjusts for smaller screens) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically on small screens */
+    }
+    .navbar a {
+        margin: 5px 0; /* Reduced spacing between links on mobile */
+        width: 100%; /* Made each link take full width on mobile */
+    }
+}
+
 /* Banner with Decorative Color Blocking on Index (Home Page) */
 .banner {
     width: 100%;
