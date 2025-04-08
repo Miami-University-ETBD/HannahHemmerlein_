@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Heritage Crafts</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
    <style>
        .header-bg {
            background-color: #9cc7ff; /* Light pink background */
@@ -159,15 +159,22 @@
         <div class="col s10">
           <span class="black-text">
             <div class="video-container">
-                <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+                <iframe width="853" height="480" src="https://www.youtube.com/watch?v=1Gic5nYiAjM" frameborder="0" allowfullscreen></iframe>
               </div>
                 
           </span>
         </div>
       </div>
     </div>
+  </div
+   class="carousel">
+    <a class="carousel-item" href="#one!"><img src="havanavase.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fkilnfrog.com%2Fblogs%2Ffrogblog%2Fpottery-vs-ceramics&psig=AOvVaw3rxGOgDO2FaQ4NlXFbNdxH&ust=1744155231156000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJij3tmKx4wDFQAAAAAdAAAAABAQ"></a>
+    <a class="carousel-item" href="#three!"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fthelittlepotcompany.co.uk%2Fblogs%2Fpottery%2Fhow-to-make-hand-thrown-stoneware-pottery&psig=AOvVaw3rxGOgDO2FaQ4NlXFbNdxH&ust=1744155231156000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJij3tmKx4wDFQAAAAAdAAAAABAY"></a>
+    <a class="carousel-item" href="#four!"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fclaygroundonline.com%2Fpottery-classes%2F&psig=AOvVaw3rxGOgDO2FaQ4NlXFbNdxH&ust=1744155231156000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJij3tmKx4wDFQAAAAAdAAAAABAg"></a>
+    <a class="carousel-item" href="#five!"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fnewdarlings.com%2F2021%2F05%2Fmakers-series-juno-pottery%2F&psig=AOvVaw3rxGOgDO2FaQ4NlXFbNdxH&ust=1744155231156000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJij3tmKx4wDFQAAAAAdAAAAABAo"></a>
   </div>
-
+      
    <!-- Footer -->
    <footer class="page-footer header-bg">
        <div class="container">
@@ -178,5 +185,59 @@
            </div>
        </div>
    </footer>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <script>
+    // Initialize modal
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+    });
+
+
+    // Function to display selected pastry
+    function displayPastry() {
+        const selectedPastry = document.querySelector('input[name="pastry"]:checked').value;
+        document.getElementById('pastry-response').innerText = `You selected: ${selectedPastry}`;
+    }
+    // Function to handle email subscription form submission
+    function submitEmail(event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+        document.getElementById('email-response').innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+        document.getElementById('email').value = ''; // Clear the input
+
+
+        // Display modal
+        const modalText = document.getElementById('modal-content-text');
+        modalText.innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+        const modal = M.Modal.getInstance(document.getElementById('modal1'));
+        modal.open();
+    }
+    <div id="radio-section" class="section container">
+       <h2>Select Your Favorite Pottery to Make</h2>
+       <form>
+           <p>
+               <label>
+                   <input name="pottery" type="radio" value="Vase" onclick="displayPottery()"/>
+                   <span>Vase</span>
+               </label>
+           </p>
+           <p>
+               <label>
+                   <input name="pottery" type="radio" value="Mug" onclick="displayPottery()"/>
+                   <span>Mug</span>
+               </label>
+           </p>
+           <p>
+               <label>
+                   <input name="pottery" type="radio" value="bowl" onclick="displayPottery()"/>
+                   <span>Bowl</span>
+               </label>
+           </p>
+       </form>
+       <div id="pottery-response"></div>
+   </div>
+   
+</script>
 </body>
 </html>
