@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Interactions</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+ <!-- Navigation Bar -->
+ <div class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="materialize.html">Materialize</a></li>
+        <li><a href="bonus.html">Bonus</a></li> 
+        <li><a href="jquery.html">Bonus</a></li> 
+    </ul>
+</div>
+  <!-- Toggle Paragraph -->
+  <h2>Can you guess our best selling product?</h2>
+  <button id="toggleBtn">Show/Hide Answer</button>
+  <p id="toggleText" style="display:none;">The Alix Plates are our #1 bestseller! Available in 5 colors and in various package sets, they're the perfect staple for any table!</p>
+
+  <!-- Fade In Image -->
+  <h2>Check them out!</h2>
+  <button id="fadeBtn">Fade In Image</button><br><br>
+  <img id="fadeImg" src="images/alixplate.jpg" alt="Placeholder" style="display:none;">
+
+  <!-- Accordion -->
+  <h2>Learn More About Our Handmade Dishes</h2>
+  <div class="accordion">
+    <h3 class="accordion-header">Pottery Making Process</h3>
+    <div class="accordion-content" style="display:none;">
+      <p>At Heritage Crafts, we begin every handmade pottery plate with care and intention. First, we prepare our clay by wedging it thoroughly to ensure a smooth, consistent texture free of air bubbles. Depending on the design, we either throw the plates on the potter’s wheel or hand-build them using rolled slabs of clay. Each piece is shaped and refined with close attention to detail. Once the plates reach a leather-hard stage—firm but still workable—we carefully trim the bases and add foot rings to give them a balanced, finished feel. After drying completely, the plates undergo their first firing in the kiln, known as a bisque fire, which hardens the clay and readies it for glazing. We then apply our glazes by hand, using dipping or brushing techniques to bring out rich, earthy tones and unique finishes. The final glaze firing melts the glaze into a smooth, durable surface that’s both beautiful and functional. After cooling, each plate is inspected and finished with pride, ready to bring timeless, handcrafted charm to your table.</p>
+    </div>
+
+    <h3 class="accordion-header">Glaze Options</h3>
+    <div class="accordion-content" style="display:none;">
+      <p>At Heritage Crafts, we offer a curated selection of glazes designed to highlight the natural beauty of each handmade plate. Our collection includes soft matte finishes in warm earth tones like sandstone, sage, and charcoal, as well as glossy glazes in deep ocean blue, speckled cream, and classic white. Each glaze is carefully mixed and applied by hand, resulting in subtle variations that make every piece one-of-a-kind. Whether you prefer a rustic, organic look or a more refined, modern feel, our glaze options are crafted to complement any table setting with timeless character.</p>
+    </div>
+  </div>
+
+  <script>
+    // Toggle Text
+    $('#toggleBtn').click(function() {
+      $('#toggleText').toggle();
+    });
+
+    // Fade In Image
+    $('#fadeBtn').click(function() {
+      $('#fadeImg').fadeIn();
+    });
+
+    // Accordion
+    $('.accordion-header').click(function() {
+      $(this).next('.accordion-content').slideToggle();
+      $('.accordion-content').not($(this).next()).slideUp();
+    });
+  </script>
+
+</body>
+</html>
