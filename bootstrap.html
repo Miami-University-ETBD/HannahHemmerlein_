@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+     <!-- Navigation Bar -->
+  <div class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="materialize.html">Materialize</a></li>
+        <li><a href="bonus.html">Bonus</a></li> 
+        <li><a href="jquery.html">Jquery</a></li> 
+        <li><a href="bootstrap.html">Bootstrap</a></li> 
+    </ul>
+</div>
+
+<div class="container-fluid p-5 bg-primary text-white text-center">
+  <h1>Heritage Crafts</h1>
+  <p>Love & Legacy</p>
+</div>
+  
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Check Out Our Shop!</h3>
+      <p>We love sharing our handmade pieces with you.</p>
+      <p>Come find the perfect touch for your home, or have one custom made!</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Take a Pottery Class!</h3>
+      <p>We offer special occasion potter classes as well as reservations for large groups!</p>
+      <p>Take some time to make something special and learn about a special form of art.</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Learn About Our History!</h3>        
+      <p>Each piece tells a story across generations.</p>
+      <p>Ask us about how we got started or read more on our website!</p>
+    </div>
+  </div>
+</div>
+<div class="container mt-3">
+    <h2>Frequent Shopper? Make an Account!</h2>
+    <form action="/action_page.php">
+      <div class="mb-3 mt-3">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      </div>
+      <div class="form-check mb-3">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="remember"> Remember me
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/mariepiedish.jpg" alt="pie dish" class="d-block" style="width:100%">
+      </div>
+      <div class="carousel-item">
+        <img src="images/charger.jpg" alt="charger plate" class="d-block" style="width:100%">
+      </div>
+      <div class="carousel-item">
+        <img src="images/patternedvase.jpg" alt="patterned vase" class="d-block" style="width:100%">
+      </div>
+    </div>
+    
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  
+  <div class="container-fluid mt-3">
+    <h3>Browse Our Creations</h3>
+    <p>These are only a few of our handmade pieces!</p>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Choose Your Favorite
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Vases</a></li>
+      <li><a class="dropdown-item" href="#">Bowls</a></li>
+      <li><a class="dropdown-item" href="#">Mugs</a></li>
+    </ul>
+  </div>
+</body>
+ <!-- Footer of the website -->
+ <footer>
+    <p>&copy; 2025 Heritage Crafts. All rights reserved.</p>
+</footer>
+</html>
